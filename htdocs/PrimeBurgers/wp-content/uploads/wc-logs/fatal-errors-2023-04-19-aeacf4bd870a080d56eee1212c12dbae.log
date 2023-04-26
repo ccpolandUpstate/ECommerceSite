@@ -1,0 +1,306 @@
+2023-04-19T02:40:48+00:00 CRITICAL Uncaught RuntimeException: Unable to claim actions. Database error. in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:864
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(778): ActionScheduler_DBStore->claim_actions(0, 25, NULL, Array, '')
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(157): ActionScheduler_DBStore->stake_claim(25)
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(136): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#3 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): ActionScheduler_QueueRunner->run('WP Cron')
+#4 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#6 C:\xampp\htdocs\PrimeBurgers\wp-cron.php(188): do_action_ref_array('action_schedule...', Array)
+#7 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 864
+
+2023-04-19T02:40:51+00:00 CRITICAL Uncaught RuntimeException: Error saving action: Table 'wordpress.wp_actionscheduler_actions' doesn't exist in engine in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:118
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(62): ActionScheduler_DBStore->save_action_to_db(Object(ActionScheduler_Action), NULL, false)
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(244): ActionScheduler_DBStore->save_action(Object(ActionScheduler_Action))
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(151): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(122): ActionScheduler_ActionFactory->recurring_unique('woocommerce_cle...', Array, false, 86400, '', false)
+#4 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(65): as_schedule_recurring_action(false, 86400, 'woocommerce_cle...')
+#5 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(57): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->maybe_create_cronjobs()
+#6 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->install('')
+#7 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\PrimeBurgers\wp-admin\admin.php(175): do_action('admin_init')
+#10 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 118
+
+2023-04-19T02:40:53+00:00 CRITICAL Uncaught RuntimeException: Error saving action: Table 'wordpress.wp_actionscheduler_actions' doesn't exist in engine in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:118
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(62): ActionScheduler_DBStore->save_action_to_db(Object(ActionScheduler_Action), NULL, false)
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(244): ActionScheduler_DBStore->save_action(Object(ActionScheduler_Action))
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(151): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(122): ActionScheduler_ActionFactory->recurring_unique('woocommerce_cle...', Array, false, 86400, '', false)
+#4 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(65): as_schedule_recurring_action(false, 86400, 'woocommerce_cle...')
+#5 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(57): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->maybe_create_cronjobs()
+#6 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->install('')
+#7 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\PrimeBurgers\wp-admin\admin.php(175): do_action('admin_init')
+#10 C:\xampp\htdocs\PrimeBurgers\wp-admin\post.php(12): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 118
+
+2023-04-19T02:43:32+00:00 CRITICAL Uncaught RuntimeException: Unable to claim actions. Database error. in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:864
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(778): ActionScheduler_DBStore->claim_actions(0, 25, NULL, Array, '')
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(157): ActionScheduler_DBStore->stake_claim(25)
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(136): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#3 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): ActionScheduler_QueueRunner->run('WP Cron')
+#4 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#6 C:\xampp\htdocs\PrimeBurgers\wp-cron.php(188): do_action_ref_array('action_schedule...', Array)
+#7 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 864
+
+2023-04-19T02:43:34+00:00 CRITICAL Uncaught RuntimeException: Error saving action: Table 'wordpress.wp_actionscheduler_actions' doesn't exist in engine in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:118
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(62): ActionScheduler_DBStore->save_action_to_db(Object(ActionScheduler_Action), NULL, false)
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(244): ActionScheduler_DBStore->save_action(Object(ActionScheduler_Action))
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(151): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(122): ActionScheduler_ActionFactory->recurring_unique('woocommerce_cle...', Array, false, 86400, '', false)
+#4 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(65): as_schedule_recurring_action(false, 86400, 'woocommerce_cle...')
+#5 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(57): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->maybe_create_cronjobs()
+#6 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->install('')
+#7 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\PrimeBurgers\wp-admin\admin.php(175): do_action('admin_init')
+#10 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 118
+
+2023-04-19T02:43:37+00:00 CRITICAL Uncaught RuntimeException: Error saving action: Table 'wordpress.wp_actionscheduler_actions' doesn't exist in engine in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:118
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(62): ActionScheduler_DBStore->save_action_to_db(Object(ActionScheduler_Action), NULL, false)
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(244): ActionScheduler_DBStore->save_action(Object(ActionScheduler_Action))
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(151): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(122): ActionScheduler_ActionFactory->recurring_unique('woocommerce_cle...', Array, false, 86400, '', false)
+#4 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(65): as_schedule_recurring_action(false, 86400, 'woocommerce_cle...')
+#5 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(57): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->maybe_create_cronjobs()
+#6 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->install('')
+#7 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\PrimeBurgers\wp-admin\admin.php(175): do_action('admin_init')
+#10 C:\xampp\htdocs\PrimeBurgers\wp-admin\index.php(10): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 118
+
+2023-04-19T02:46:35+00:00 CRITICAL Uncaught RuntimeException: Unable to claim actions. Database error. in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:864
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(778): ActionScheduler_DBStore->claim_actions(0, 25, NULL, Array, '')
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(157): ActionScheduler_DBStore->stake_claim(25)
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(136): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#3 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): ActionScheduler_QueueRunner->run('WP Cron')
+#4 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#6 C:\xampp\htdocs\PrimeBurgers\wp-cron.php(188): do_action_ref_array('action_schedule...', Array)
+#7 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 864
+
+2023-04-19T02:46:36+00:00 CRITICAL Uncaught RuntimeException: Error saving action: Table 'wordpress.wp_actionscheduler_actions' doesn't exist in engine in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:118
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(62): ActionScheduler_DBStore->save_action_to_db(Object(ActionScheduler_Action), NULL, false)
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(244): ActionScheduler_DBStore->save_action(Object(ActionScheduler_Action))
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(151): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(122): ActionScheduler_ActionFactory->recurring_unique('woocommerce_cle...', Array, false, 86400, '', false)
+#4 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(65): as_schedule_recurring_action(false, 86400, 'woocommerce_cle...')
+#5 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(57): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->maybe_create_cronjobs()
+#6 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->install('')
+#7 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\PrimeBurgers\wp-admin\admin.php(175): do_action('admin_init')
+#10 C:\xampp\htdocs\PrimeBurgers\wp-admin\plugins.php(10): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 118
+
+2023-04-19T02:46:45+00:00 CRITICAL Uncaught RuntimeException: Error saving action: Table 'wordpress.wp_actionscheduler_actions' doesn't exist in engine in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:118
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(62): ActionScheduler_DBStore->save_action_to_db(Object(ActionScheduler_Action), NULL, false)
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(244): ActionScheduler_DBStore->save_action(Object(ActionScheduler_Action))
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(151): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(122): ActionScheduler_ActionFactory->recurring_unique('woocommerce_cle...', Array, false, 86400, '', false)
+#4 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(65): as_schedule_recurring_action(false, 86400, 'woocommerce_cle...')
+#5 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(57): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->maybe_create_cronjobs()
+#6 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->install('')
+#7 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\PrimeBurgers\wp-admin\admin.php(175): do_action('admin_init')
+#10 C:\xampp\htdocs\PrimeBurgers\wp-admin\plugins.php(10): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 118
+
+2023-04-19T02:46:50+00:00 CRITICAL Uncaught RuntimeException: Error saving action: Table 'wordpress.wp_actionscheduler_actions' doesn't exist in engine in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:118
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(62): ActionScheduler_DBStore->save_action_to_db(Object(ActionScheduler_Action), NULL, false)
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(244): ActionScheduler_DBStore->save_action(Object(ActionScheduler_Action))
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(151): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(122): ActionScheduler_ActionFactory->recurring_unique('woocommerce_cle...', Array, false, 86400, '', false)
+#4 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(65): as_schedule_recurring_action(false, 86400, 'woocommerce_cle...')
+#5 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(57): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->maybe_create_cronjobs()
+#6 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->install('')
+#7 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\PrimeBurgers\wp-admin\admin.php(175): do_action('admin_init')
+#10 C:\xampp\htdocs\PrimeBurgers\wp-admin\plugins.php(10): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 118
+
+2023-04-19T02:46:52+00:00 CRITICAL Uncaught RuntimeException: Error saving action: Table 'wordpress.wp_actionscheduler_actions' doesn't exist in engine in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:118
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(62): ActionScheduler_DBStore->save_action_to_db(Object(ActionScheduler_Action), NULL, false)
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(244): ActionScheduler_DBStore->save_action(Object(ActionScheduler_Action))
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(151): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(122): ActionScheduler_ActionFactory->recurring_unique('woocommerce_cle...', Array, false, 86400, '', false)
+#4 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(65): as_schedule_recurring_action(false, 86400, 'woocommerce_cle...')
+#5 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(57): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->maybe_create_cronjobs()
+#6 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->install('')
+#7 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\PrimeBurgers\wp-admin\admin-ajax.php(45): do_action('admin_init')
+#10 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 118
+
+2023-04-19T02:46:52+00:00 CRITICAL Uncaught RuntimeException: Error saving action: Table 'wordpress.wp_actionscheduler_actions' doesn't exist in engine in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:118
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(62): ActionScheduler_DBStore->save_action_to_db(Object(ActionScheduler_Action), NULL, false)
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(244): ActionScheduler_DBStore->save_action(Object(ActionScheduler_Action))
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(151): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(122): ActionScheduler_ActionFactory->recurring_unique('woocommerce_cle...', Array, false, 86400, '', false)
+#4 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(65): as_schedule_recurring_action(false, 86400, 'woocommerce_cle...')
+#5 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(57): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->maybe_create_cronjobs()
+#6 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->install('')
+#7 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\PrimeBurgers\wp-admin\admin-ajax.php(45): do_action('admin_init')
+#10 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 118
+
+2023-04-19T02:46:54+00:00 CRITICAL Uncaught RuntimeException: Error saving action: Table 'wordpress.wp_actionscheduler_actions' doesn't exist in engine in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:118
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(62): ActionScheduler_DBStore->save_action_to_db(Object(ActionScheduler_Action), NULL, false)
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(244): ActionScheduler_DBStore->save_action(Object(ActionScheduler_Action))
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(151): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(122): ActionScheduler_ActionFactory->recurring_unique('woocommerce_cle...', Array, false, 86400, '', false)
+#4 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(65): as_schedule_recurring_action(false, 86400, 'woocommerce_cle...')
+#5 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(57): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->maybe_create_cronjobs()
+#6 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->install('')
+#7 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\PrimeBurgers\wp-admin\admin.php(175): do_action('admin_init')
+#10 C:\xampp\htdocs\PrimeBurgers\wp-admin\plugins.php(10): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 118
+
+2023-04-19T02:49:12+00:00 CRITICAL Uncaught RuntimeException: Unable to claim actions. Database error. in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:864
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(778): ActionScheduler_DBStore->claim_actions(0, 25, NULL, Array, '')
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(157): ActionScheduler_DBStore->stake_claim(25)
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(136): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#3 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): ActionScheduler_QueueRunner->run('WP Cron')
+#4 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#6 C:\xampp\htdocs\PrimeBurgers\wp-cron.php(188): do_action_ref_array('action_schedule...', Array)
+#7 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 864
+
+2023-04-19T02:49:12+00:00 CRITICAL Uncaught RuntimeException: Error saving action: Table 'wordpress.wp_actionscheduler_actions' doesn't exist in engine in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:118
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(62): ActionScheduler_DBStore->save_action_to_db(Object(ActionScheduler_Action), NULL, false)
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(244): ActionScheduler_DBStore->save_action(Object(ActionScheduler_Action))
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(151): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(122): ActionScheduler_ActionFactory->recurring_unique('woocommerce_cle...', Array, false, 86400, '', false)
+#4 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(65): as_schedule_recurring_action(false, 86400, 'woocommerce_cle...')
+#5 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(57): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->maybe_create_cronjobs()
+#6 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->install('')
+#7 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\PrimeBurgers\wp-admin\admin.php(175): do_action('admin_init')
+#10 C:\xampp\htdocs\PrimeBurgers\wp-admin\plugins.php(10): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 118
+
+2023-04-19T03:03:00+00:00 CRITICAL Uncaught RuntimeException: Unable to claim actions. Database error. in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:864
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(778): ActionScheduler_DBStore->claim_actions(0, 25, NULL, Array, '')
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(157): ActionScheduler_DBStore->stake_claim(25)
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(136): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#3 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): ActionScheduler_QueueRunner->run('WP Cron')
+#4 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#6 C:\xampp\htdocs\PrimeBurgers\wp-cron.php(188): do_action_ref_array('action_schedule...', Array)
+#7 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 864
+
+2023-04-19T03:03:00+00:00 CRITICAL Uncaught RuntimeException: Error saving action: Table 'wordpress.wp_actionscheduler_actions' doesn't exist in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:118
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(62): ActionScheduler_DBStore->save_action_to_db(Object(ActionScheduler_Action), NULL, false)
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(244): ActionScheduler_DBStore->save_action(Object(ActionScheduler_Action))
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(151): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(122): ActionScheduler_ActionFactory->recurring_unique('woocommerce_cle...', Array, false, 86400, '', false)
+#4 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(65): as_schedule_recurring_action(false, 86400, 'woocommerce_cle...')
+#5 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(57): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->maybe_create_cronjobs()
+#6 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->install('')
+#7 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\PrimeBurgers\wp-admin\admin.php(175): do_action('admin_init')
+#10 C:\xampp\htdocs\PrimeBurgers\wp-admin\plugins.php(10): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 118
+
+2023-04-19T03:03:16+00:00 CRITICAL Uncaught RuntimeException: Error saving action: Table 'wordpress.wp_actionscheduler_actions' doesn't exist in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:118
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(62): ActionScheduler_DBStore->save_action_to_db(Object(ActionScheduler_Action), NULL, false)
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(244): ActionScheduler_DBStore->save_action(Object(ActionScheduler_Action))
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(151): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(122): ActionScheduler_ActionFactory->recurring_unique('woocommerce_cle...', Array, false, 86400, '', false)
+#4 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(65): as_schedule_recurring_action(false, 86400, 'woocommerce_cle...')
+#5 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(57): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->maybe_create_cronjobs()
+#6 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->install('')
+#7 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\PrimeBurgers\wp-admin\admin-ajax.php(45): do_action('admin_init')
+#10 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 118
+
+2023-04-19T03:03:40+00:00 CRITICAL Uncaught RuntimeException: Error saving action: Table 'wordpress.wp_actionscheduler_actions' doesn't exist in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:118
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(62): ActionScheduler_DBStore->save_action_to_db(Object(ActionScheduler_Action), NULL, false)
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(244): ActionScheduler_DBStore->save_action(Object(ActionScheduler_Action))
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(151): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(122): ActionScheduler_ActionFactory->recurring_unique('woocommerce_cle...', Array, false, 86400, '', false)
+#4 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(65): as_schedule_recurring_action(false, 86400, 'woocommerce_cle...')
+#5 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(57): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->maybe_create_cronjobs()
+#6 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->install('')
+#7 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\PrimeBurgers\wp-admin\admin.php(175): do_action('admin_init')
+#10 C:\xampp\htdocs\PrimeBurgers\wp-admin\plugin-install.php(16): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 118
+
+2023-04-19T03:04:18+00:00 CRITICAL Uncaught RuntimeException: Unable to claim actions. Database error. in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:864
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(778): ActionScheduler_DBStore->claim_actions(0, 25, NULL, Array, '')
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(157): ActionScheduler_DBStore->stake_claim(25)
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_QueueRunner.php(136): ActionScheduler_QueueRunner->do_batch(25, 'WP Cron')
+#3 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): ActionScheduler_QueueRunner->run('WP Cron')
+#4 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#6 C:\xampp\htdocs\PrimeBurgers\wp-cron.php(188): do_action_ref_array('action_schedule...', Array)
+#7 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 864
+
+2023-04-19T03:04:18+00:00 CRITICAL Uncaught RuntimeException: Error saving action: Table 'wordpress.wp_actionscheduler_actions' doesn't exist in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php:118
+Stack trace:
+#0 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php(62): ActionScheduler_DBStore->save_action_to_db(Object(ActionScheduler_Action), NULL, false)
+#1 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(244): ActionScheduler_DBStore->save_action(Object(ActionScheduler_Action))
+#2 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\ActionScheduler_ActionFactory.php(151): ActionScheduler_ActionFactory->store(Object(ActionScheduler_Action))
+#3 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\functions.php(122): ActionScheduler_ActionFactory->recurring_unique('woocommerce_cle...', Array, false, 86400, '', false)
+#4 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(65): as_schedule_recurring_action(false, 86400, 'woocommerce_cle...')
+#5 C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\woocommerce-blocks\src\Domain\Services\DraftOrders.php(57): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->maybe_create_cronjobs()
+#6 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(308): Automattic\WooCommerce\Blocks\Domain\Services\DraftOrders->install('')
+#7 C:\xampp\htdocs\PrimeBurgers\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#8 C:\xampp\htdocs\PrimeBurgers\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#9 C:\xampp\htdocs\PrimeBurgers\wp-admin\admin-ajax.php(45): do_action('admin_init')
+#10 {main}
+  thrown in C:\xampp\htdocs\PrimeBurgers\wp-content\plugins\woocommerce\packages\action-scheduler\classes\data-stores\ActionScheduler_DBStore.php on line 118
+

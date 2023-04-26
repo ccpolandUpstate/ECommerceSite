@@ -1,0 +1,11 @@
+a.button.button-primary.get,a.button.button-primary.get:active,a.button.button-primary.get:focus,a.button.button-primary.get:hover,a.button.button-primary.get:visited{
+	background:#7e4c4f !important;
+}
+a.button.button-primary.get:hover{
+	background: #7e4c4f !important;
+	color: #fff !important;
+}
+thead.table-book,a.button.button-primary.solo, a.button.button-primary.solo:active, a.button.button-primary.solo:focus, a.button.button-primary.solo:hover, a.button.button-primary.solo:visited {
+    background: #7e4c4f !important;
+		color: #fff !important;
+}

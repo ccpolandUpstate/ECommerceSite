@@ -1,0 +1,188 @@
+@charset "UTF-8";
+/*
+Theme Name: Animal Pet Care
+Author: TheMagnifico52
+Theme URI: https://www.themagnifico.net/themes/free-pet-store-wordpress-theme/
+Author URI: https://www.themagnifico.net/
+Description: Animal Pet Store is an advanced, feature-rich theme designed and developed with pet care facilities in mind. It incorporates most of the necessary functionalities needed by such businesses, while also taking into account the specific needs of their furry clients and caring pet parents. The theme is fully compatible with WooCommerce, so you'll be able to perfectly integrate it with your existing online store. This theme is apt for pet boarding, dog & puppy daycare, pet shop, pet store, pet grooming parlour, animal care taker, cat shop, apothacaries, wild life, breeders, pet hotels, dog trainers, pet hospital, aquariums, cat trainers,  and many more such businesses.At the heart of this theme lies a powerful yet easy to use admin environment that provides you with a powerful shopping experience for your customers. The featured layout gives importance to making the product stand out emphasizing various elements as well as creating a unique price comparison table.
+Version: 0.3.4
+Tested up to: 6.1
+Requires PHP: 7.2
+Requires at least: 5.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Template: pet-care-zone
+Text Domain: animal-pet-care
+Tags: custom-logo, one-column, two-columns, wide-blocks, block-styles, editor-style, sticky-post, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, full-width-template, threaded-comments, theme-options, rtl-language-support, left-sidebar, right-sidebar, grid-layout, blog, e-commerce, portfolio
+
+Animal Pet Care WordPress Theme has been created by TheMagnifico52(themagnifico.net), 2022.
+Animal Pet Care WordPress Theme is released under the terms of GNU GPL
+*/
+
+body,h1, h2, h3, h4, h5, h6,.navbar-brand h1.site-title, p.site-title{
+    font-family: 'Dosis', sans-serif;
+}
+h1, h2, h3, h4, h5, h6,.navbar-brand a{
+    font-weight: bold;
+    color: #7e4c4f;
+}
+body{
+    color: #acacac;
+}
+.top-info,.comment-respond input#submit,#colophon,.main-navigation .sub-menu,.sidebar h5,#button,.sidebar input[type="submit"], .sidebar button[type="submit"],.sidebar .tagcloud a:hover,.post-navigation .nav-previous a:hover, .post-navigation .nav-next a:hover, .posts-navigation .nav-previous a:hover, .posts-navigation .nav-next a:hover,.woocommerce .woocommerce-ordering select,.pro-button a, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt,.woocommerce-account .woocommerce-MyAccount-navigation ul li,.toggle-nav i,span.onsale,.addtocart a:hover,.social-link i.fab.fa-linkedin-in,.woocommerce a.added_to_cart,.social-link i.fab.fa-facebook-f,.social-link i.fab.fa-twitter,.social-link i.fab.fa-instagram,.social-link i.fab.fa-linkedin-in,.social-link i.fab.fa-pinterest-p{
+    background: #7e4c4f;
+}
+h1, h2, h3, h4, h5, h6,.article-box a,.sidebar ul li a:hover,p.price, .woocommerce ul.products li.product .price, .woocommerce div.product p.price, .woocommerce div.product span.price,.box-category h4 a,.main-navigation .menu > li > a{
+    color: #7e4c4f;
+}
+.post-navigation .nav-previous a:hover, .post-navigation .nav-next a:hover, .posts-navigation .nav-previous a:hover, .posts-navigation .nav-next a:hover,.addtocart a:hover{
+    border-color: #7e4c4f;
+}
+.wp-block-quote, .wp-block-quote:not(.is-large):not(.is-style-large), .wp-block-pullquote{
+    border-color: #7e4c4f !important;
+}
+
+.topbtn,.main-navigation .sub-menu > li > a:hover, .main-navigation .sub-menu > li > a:focus,.pro-button a:hover, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover,.woocommerce ul.products li.product .onsale, .woocommerce span.onsale,#button:hover, #button:active,.woocommerce a.added_to_cart:hover{
+    background: #f6ab4a;
+}
+a,.main-navigation .menu > li > a:hover{
+    color: #f6ab4a;
+}
+
+.navigation_header .nav{
+    justify-content: flex-end;
+}
+
+.social-link i.fab.fa-facebook-f:hover, .social-link i.fab.fa-twitter:hover, .social-link i.fab.fa-instagram:hover, .social-link i.fab.fa-linkedin-in:hover, .social-link i.fab.fa-pinterest-p:hover{
+    background: #f6ab4a;
+}
+
+.topbtn{
+    text-transform: none;
+}
+.topbtn a,.main-navigation .menu > li > a,.box-category a {
+    font-weight: bold;
+}
+.main-navigation .menu > li{
+    font-size: 15px;
+}
+.social-link i:hover{
+    background-color: #f6ab4a !important;
+}
+.top-info p:hover a{
+    color: #f6ab4a;
+}
+.top-info p:hover i{
+    color: #f6ab4a;
+}
+.topbtn:hover{
+  background-color: #ffffff;
+}
+.topbtn:hover a{
+    color: #f6ab4a;
+}
+
+
+/* Slider */
+
+.slider-box img {
+    position: relative;
+    -webkit-mask-image: none;
+    mask-image: none;
+    -webkit-mask-position: unset;
+    mask-position: unset;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: unset;
+    mask-size: unset;
+    -webkit-mask-size: unset;
+    height: 550px;
+    object-fit: cover;
+}
+.slider-box:after {
+  content: "";
+  background-image: url(assets/img/slider-design.png);
+  background-repeat: repeat-x;
+  background-position: center top;
+  display: block;
+  height: 26px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+.slider-box .slideimg {
+    position: relative;
+}
+.slider-inner-box {
+    z-index: 9999;
+    right: 30%;
+    left: 30%;
+}
+.slider-inner-box h1 a{
+    font-size: 55px;
+}
+.slider-btn a {
+    background: #f6ab4a;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+    display: inline-block;
+    border-radius: 30px;
+}
+.slider-btn a:hover{
+    background: #fff;
+    color: #7e4c4f;
+}
+
+/* Services */
+
+.services-sec h3 {
+    font-size: 40px;
+}
+.services-sec h6 {
+    font-size: 16px;
+    color: #f6ab4a;
+}
+.services-sec img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px){
+    .main-navigation .menu > li > a{
+        color: #fff;
+    }
+    .slider-inner-box h1 a{
+        font-size: 40px;
+    }
+    .slider-inner-box {
+        right: 10%;
+        left: 10%;
+    }
+    .slider-box img {
+        height: 350px;
+        object-fit: cover;
+    }
+}
+@media screen and (max-width: 1000px){
+    .sidenav{
+        background: #7e4c4f;
+    }
+    .slider-inner-box {
+        right: 10%;
+        left: 10%;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1199px){
+    .slider-inner-box {
+        right: 25%;
+        left: 25%;
+    }
+    .services-sec img {
+        width: 200px;
+        height: 200px;
+    }
+}
